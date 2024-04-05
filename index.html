@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipie generator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="randomDins">
+        <p>Click here for easy weekly dinners when you have no time!</p>
+      </div>
+      <div id="list"></div>
+      <button id="button">Give me Dinner Ideas</button>
+    </div>
+    
+    <div id="form" style="display: none;">
+      <h2>Like what you see? Send the Dinner and Shopping list to yourself!</h2>
+      <form id="dinnerForm">
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" /><br />
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" /><br />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+
+    <script src="./javascritpt.js"></script>
+  </body>
+</html>

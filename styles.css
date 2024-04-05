@@ -1,0 +1,42 @@
+body {
+	background-color: rgb(197, 47, 47);
+	color: rgb(255, 255, 255);
+}
+
+.shopping-list {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+  }
+  
+  .shopping-list li{
+	margin: 5px;
+	padding: 5px;
+	border: 1px solid #ccc;
+	width: calc(30% - 5px);
+	box-sizing: border-box;
+  }
+  .container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	border: 2px solid black;
+  }
+
+
+  
+  
+  .shopping-item {
+    display: flex;
+    align-items: center;
+  }
+
+ 
+.strikethrough {
+	text-decoration: line-through;
+  }
+  .remove-btn {
+    margin-left: auto;
+  }
