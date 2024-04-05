@@ -1,6 +1,8 @@
+
 document.addEventListener('DOMContentLoaded', () => {
     const dinnerEl = document.getElementById("randomDins");
     const listEl = document.getElementById("list");
+    
 
     document.getElementById("button").addEventListener("click", () => {
         form.style.display = "block";
@@ -16,6 +18,7 @@ const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
 let plate = [];
 
 function generateIngredients() {
+    try {
     let dinners = [];
     for (let day of days) {
         dinners.push(createMealFrom(proteins, carbs, vegetables, fullRecipes));
@@ -25,6 +28,10 @@ function generateIngredients() {
 
     showDinners(dinners, dinnerEl);
     showShopping(shoppingList, listEl);
+} catch (error) {
+    console.log(error);
+    alert("an error occured, please try again");
+}
 }
 
 function randomFoodIngredients(ingredients) {
@@ -158,6 +165,8 @@ dinnerForm.addEventListener("submit", (event) => {
   window.open(link);
 });
 
+const email = form.elements["email"];
+const name = form.elements["name"];
 function validateEmail(evt) {
     let emailVal = email.value;
   
@@ -187,4 +196,26 @@ function validateEmail(evt) {
   }
   
   form.addEventListener("submit", validateEmail);
+
+  function validateName() {
+    if (name.value === "") {
+      alert("Please provide a name.");
+      name.focus();
+      return false;
+    }
+    return name.value;
+  }
+  form.addEventListener("blur", validateName);
+
+  const dinnerTempate = document.querySelector("#dinnerTemplate");
+  const dinnerList = document.querySelector("#list");
+  const clone = dinnerTempate.content.cloneNode(true);
+  const button = document.querySelector("#button");
+  button.addEventListener("click", () => {
+    dinnerList.innerHTML = "";
+    dinnerList.appendChild(clone);
+    dinnerList.style.display = "block";
+  });
+  
 });
+

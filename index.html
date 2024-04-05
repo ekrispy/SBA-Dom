@@ -14,17 +14,25 @@
       <div id="list"></div>
       <button id="button">Give me Dinner Ideas</button>
     </div>
-    
-    <div id="form" style="display: none;">
+
+    <div id="form" style="display: none;" >
       <h2>Like what you see? Send the Dinner and Shopping list to yourself!</h2>
       <form id="dinnerForm">
         <label for="name">Name:</label><br />
-        <input type="text" id="name" name="name" /><br />
+        <input type="text" id="name" name="name" required/><br />
         <label for="email">Email:</label><br />
-        <input type="email" id="email" name="email" /><br />
+        <input type="email" id="email" name="email" required/><br />
         <input type="submit" value="Submit" />
       </form>
+
+      <template id="dinnerTemplate">
+        <div class="dinner">
+          <h3></h3>
+          <ul></ul>
+        </div>
+      </template>
     </div>
+
 
     <script src="./javascritpt.js"></script>
   </body>
