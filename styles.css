@@ -1,6 +1,6 @@
 body {
-	background-color: rgb(197, 47, 47);
-	color: rgb(255, 255, 255);
+	background-color: rgb(43, 43, 59);
+	color: rgb(16, 180, 230);
 }
 
 .shopping-list {
@@ -14,17 +14,34 @@ body {
 	margin: 5px;
 	padding: 5px;
 	border: 1px solid #ccc;
-	width: calc(30% - 5px);
+	width: calc(15% - 5px);
 	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
   }
   .container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-wrap: wrap;
+	border-style: none;
+	
 	
 	border: 2px solid black;
   }
 
+#randomDins {
+
+font-size: larger;  
+
+}
+.dinner-list {
+	list-style: none;
+	padding: 0;
+	display: block;
+	flex-wrap: wrap;
+  }
 
   
   
